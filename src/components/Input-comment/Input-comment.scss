@@ -1,0 +1,57 @@
+@import "../../App.scss";
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.input-comment-container {
+  height: 8rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .comment-content {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .form-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      height: 32px;
+      margin-right: 1rem;
+    }
+    .input-comment {
+      height: 3rem;
+      border-radius: 4px;
+      border: 1px solid #e9e3e3;
+      width: 420px;
+      padding: 1rem;
+      position: relative;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .btn-post-comment {
+      height: 48px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+      .btn-post-comment-content {
+        @include text-style(0.875rem, $white, center, 700);
+      }
+    }
+  }
+}

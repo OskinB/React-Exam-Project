@@ -1,0 +1,204 @@
+@import "../../App.scss";
+
+// Background filter
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(51, 51, 51, 0.6);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow: auto;
+  }
+
+  // Modal window itself
+  > div {
+    position: relative;
+    width: 680px;
+    min-height: 700px;
+    margin: auto;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    background: #ffffff;
+    overflow: auto;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+  .add-item {
+    .bx-x {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      font-size: 2rem;
+      color: $dark-grey-text;
+      .bx-x:hover {
+        color: $primary-color;
+      }
+      @include mobile {
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+  .draft-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
+    height: 2rem;
+    width: 122px;
+    border-radius: 20px;
+    border: 1.5px solid $primary-color;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    @include mobile {
+      top: 1rem;
+      right: 4rem;
+    }
+    .text {
+      width: 100%;
+    }
+  }
+
+  // Modal content
+
+  .add-item {
+    padding: 1.5rem;
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+    }
+
+    h2 {
+      margin: 3rem 0;
+      @include mobile {
+        margin-top: 3rem;
+        margin-bottom: 4.5rem;
+      }
+    }
+
+    .asterisk-alert {
+      color: $alert-color;
+    }
+
+    .asterisk {
+      color: $text-color;
+    }
+
+    .required-text-alert,
+    .font-12-regular-left {
+      margin: 2px 8px;
+    }
+
+    .steps {
+      .line:before {
+        content: "";
+        position: absolute;
+        top: 112px;
+        background-color: #e9e3e3;
+        height: 4px;
+        width: 75%;
+        left: 0;
+        margin-left: 1.5rem;
+        @include mobile {
+          margin-left: 1rem;
+          width: 90%;
+        }
+      }
+      .line-progress1,
+      .line-progress2,
+      .line-progress3 {
+        position: absolute;
+        top: 112px;
+        background-color: $primary-color;
+        height: 4px;
+        left: 0;
+        margin-left: 1.5rem;
+        @include mobile {
+          margin-left: 1rem;
+        }
+      }
+      .line-progress1 {
+        width: 25%;
+        @include mobile {
+          width: 30%;
+        }
+      }
+      .line-progress2 {
+        width: 50%;
+        @include mobile {
+          width: 60%;
+        }
+      }
+      .line-progress3 {
+        width: 75%;
+        @include mobile {
+          width: 90%;
+        }
+      }
+    }
+
+    .positionAbsolute-right {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+    }
+
+    .positionAbsolute-left {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+    }
+  }
+}
+
+.more-option-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+
+  .bxs-chevron-down {
+    margin-left: 0.5rem;
+  }
+}
+
+//4th step
+.step-4 {
+  @include flex(column, center, center);
+
+  .title {
+    margin: 80px 64px 0;
+  }
+  .insuranceImg {
+    max-height: 260px;
+    margin-top: 3rem;
+  }
+  .sub-title {
+    margin: 40px 0;
+  }
+}
+
+.btn-container {
+  @include flex(row, center, center);
+
+  .btn-holder-insurance {
+    margin-right: 40px;
+  }
+}

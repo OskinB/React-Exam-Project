@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.listview-filter {
+  width: 100%;
+  height: 72px;
+  @include mobile {
+    height: 2.5rem;
+  }
+  .content {
+    display: grid;
+    position: relative;
+    height: 72px;
+    justify-items: start;
+    align-items: center;
+    padding-left: 2rem;
+    grid-template-columns: 2fr 1fr 2fr 3fr 2fr 2fr;
+    grid-template-areas: "Named  Insuranced  Itemlabel  Location  Date  Price";
+    @include mobile {
+      grid-template-columns: 5fr 4fr 3fr;
+      grid-template-areas: "Named Date  Price";
+      padding: 1rem;
+      font-size: 14px;
+      height: 2.5rem;
+      .hide-mobile {
+        display: none;
+      }
+      .span:nth-last-of-type(1) {
+        grid-area: Named;
+      }
+      .span:nth-last-of-type(2) {
+        grid-area: Date;
+      }
+      .span:nth-last-of-type(3) {
+        grid-area: Price;
+      }
+    }
+    .span:nth-last-of-type(1) {
+      grid-area: Named;
+    }
+    .span:nth-last-of-type(2) {
+      grid-area: Insuranced;
+    }
+    .span:nth-last-of-type(3) {
+      grid-area: Itemlabel;
+    }
+    .span:nth-last-of-type(4) {
+      grid-area: Location;
+    }
+    .span:nth-last-of-type(5) {
+      grid-area: Date;
+    }
+    .span:nth-last-of-type(6) {
+      grid-area: Price;
+    }
+  }
+}

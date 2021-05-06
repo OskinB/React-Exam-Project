@@ -1,0 +1,39 @@
+@import "../../../../App.scss";
+
+.slide-section {
+  height: 60rem;
+
+  .slideshow {
+    @include flex(row, 0, 0);
+  }
+  .dots {
+    @include flex(row, space-around, 0);
+    margin-left: 5rem;
+    :first-child {
+      background-color: $primary-color;
+    }
+  }
+  p {
+    @include text-style(1rem, $dark-grey-text, left, 400);
+    margin: 3.5rem 0;
+    width: 85%;
+    line-height: 31px;
+  }
+  .slide-content {
+    @include flex(row, space-between, center);
+    // margin: 25rem 15vw 1rem 7vw;
+    margin-left: 5rem;
+    margin-right: 8rem;
+    margin-top: 10rem;
+    height: auto;
+    width: 100vw;
+  }
+  .slide-text {
+    width: 40%;
+  }
+  .right-side {
+    width: 55%;
+    padding-top: 10rem;
+    height: 50rem;
+  }
+}

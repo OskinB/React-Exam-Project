@@ -1,0 +1,10 @@
+@import "../../App.scss";
+
+.page-title-holder {
+  margin-top: 180px;
+  margin-left: 120px;
+  @include mobile {
+    margin-top: 112px;
+    margin-left: 1rem;
+  }
+}

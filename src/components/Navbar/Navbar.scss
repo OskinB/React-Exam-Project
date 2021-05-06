@@ -1,0 +1,55 @@
+@import "../../App.scss";
+
+.navbarnavbarHidden {
+  padding-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+.navbar {
+  background-color: $white;
+  @include flex(row, space-between, center);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 99;
+  // transition: top 0.3s;
+  transition: 0.3s ease-in-out;
+  @include mobile {
+    z-index: 0;
+  }
+
+  .column {
+    width: 50%;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+    @include mobile {
+      margin-left: 1rem;
+    }
+  }
+
+  .right-side {
+    @include flex(row, flex-end, center);
+    .hide-mobile {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    img {
+      padding: 1rem 2rem;
+    }
+
+    .bx-bell {
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+  }
+
+  .navbar--hidden {
+    top: -50px;
+  }
+}

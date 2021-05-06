@@ -1,0 +1,142 @@
+@import "../../App.scss";
+
+.category {
+  margin-top: 6rem;
+  @include mobile {
+    margin-top: 5rem;
+  }
+  .category-header {
+    @include mobile {
+      margin: 1rem;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .category-title {
+    @include flex(row, space-between, center);
+    .title-left {
+      @include flex(row, center, center);
+      img {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .total-holder {
+    @include flex(row, space-between, center);
+
+    .more-actions {
+      cursor: pointer;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .item-holder {
+    margin: 40px 0;
+    @include mobile {
+      margin: 1rem 0;
+    }
+
+    .list {
+      padding: 20px;
+    }
+
+    .grid-holder {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-areas: "ArrowPrev  Card1  Card2  Card3  Card4  Card5  Card6  ArrowNext";
+
+      div.category-item:nth-of-type(2) {
+        grid-area: Card1;
+      }
+
+      div.category-item:nth-of-type(3) {
+        grid-area: Card2;
+      }
+
+      div.category-item:nth-of-type(4) {
+        grid-area: Card3;
+      }
+
+      div.category-item:nth-of-type(5) {
+        grid-area: Card4;
+      }
+
+      div.category-item:nth-of-type(6) {
+        grid-area: Card5;
+      }
+
+      div.category-item:nth-of-type(7) {
+        grid-area: Card6;
+      }
+
+      .centered {
+        @include flex(row, center, center);
+      }
+
+      .arrow-prev,
+      .add-quick {
+        grid-area: ArrowPrev;
+      }
+
+      .arrow-next {
+        grid-area: ArrowNext;
+      }
+
+      .add-quick {
+        padding: 8px;
+        transition-duration: 0.3s;
+        transition-property: transform;
+
+        &:hover,
+        &:focus,
+        &:active {
+          // Grow
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+
+      .arrow-prev,
+      .arrow-next {
+        height: 32px;
+        width: 32px;
+        padding: 8px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        transition-property: transform;
+
+        &:hover,
+        &:focus,
+        &:active {
+          // Grow
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .list-holder {
+      @include flex(row, flex-end, center);
+      flex-wrap: wrap;
+
+      .loading-more {
+        margin: 24px;
+        font-style: italic;
+      }
+
+      .view-more {
+        color: $primary-color;
+        background-color: transparent;
+        margin: 24px;
+      }
+
+    }
+  }
+}

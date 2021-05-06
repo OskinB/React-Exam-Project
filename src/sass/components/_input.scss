@@ -1,0 +1,45 @@
+.textarea {
+  height: 3rem;
+  width: 468px;
+  background-color: $bg-light;
+  color: $text-color;
+  border-radius: 4px;
+  text-indent: 1rem;
+  font-size: 1rem;
+  border: none;
+  padding-top: 1rem;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.textarea:focus {
+  outline: none !important;
+  border: 1.2px solid $primary-color;
+}
+
+.input-holder {
+  @include flex(column, flex-start, flex-start);
+  margin: 1.5rem 0;
+
+  label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .input-lg {
+    @include input(268px);
+  }
+
+  .input-sm {
+    @include input(160px);
+  }
+
+  .input-lg[type="text"]:focus {
+    border: 1.2px solid $primary-color;
+  }
+}
+::placeholder {
+  color: $text-color;
+}

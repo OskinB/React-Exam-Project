@@ -1,0 +1,141 @@
+@import "../../../App.scss";
+
+/*****section 1 Hero greeting*****/
+.container {
+  .toggle {
+    display: flex;
+    width: 23rem;
+    height: 3rem;
+    background-color: $bg-lightgrey;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    padding: 2rem;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .toggled {
+    color: $primary-color;
+    cursor: default;
+  }
+  p {
+    color: $grey-text;
+  }
+  .toggle-hover:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  .greeting {
+    // margin: 0 auto 9rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    @include flex(row, space-around, 0);
+
+    .try-free-btn {
+      margin-top: 4rem;
+      margin-bottom: 10rem;
+    }
+    .cta {
+      width: 45%;
+    }
+    .hero-text {
+      line-height: 87px;
+      margin-top: 48px;
+    }
+    .hero-img {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      img {
+        max-width: 500px;
+      }
+    }
+  }
+  /*****section 2 4columns*****/
+
+  .yfirsyn,
+  .vidmot {
+    background: $bg-lightgrey;
+    width: 100%;
+    // padding-left: 7rem;
+
+    .font-36-bold {
+      margin-left: 5rem;
+      padding-top: 10.5rem;
+    }
+    .font-24-bold {
+      line-height: 3.625rem;
+    }
+    .font-24-bold-center {
+      margin: 3rem 0 1.5rem 0;
+    }
+    .flokkar {
+      color: $dark-grey-text;
+      @include flex(row, space-around, 0);
+      width: 95%;
+      height: 40rem;
+    }
+    .flokkur {
+      width: 20%;
+      text-align: center;
+      padding: 1rem;
+      margin: 3rem;
+    }
+    p {
+      line-height: 2rem;
+      @include text-style(1rem, $dark-grey-text, left, 400);
+    }
+  }
+
+  .yfirsyn .flokkar {
+    margin-top: 8rem;
+  }
+
+  /***** section 3 media publish *****/
+  .vidmot {
+    height: 100vh;
+    .vidmot-content {
+      height: 100%;
+      width: 100%;
+      @include flex(row, center, center);
+      // padding: 10rem 0 0 18rem;
+      .media-img {
+        // height: 53rem;
+        // margin-top: 3rem;
+      }
+    }
+    .vidmot-texti {
+      @include flex(column, center, 0);
+      width: fit-content;
+      padding-left: 4rem;
+      p {
+        width: 15rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  /*****section 4 video *****/
+
+  .video-section {
+    height: 90vh;
+    .video-text {
+      margin: 5.3rem 0 3rem 5rem;
+
+      .headline {
+        padding-bottom: 2rem;
+      }
+      .videoplayer {
+        margin: 5rem auto;
+        width: 640px;
+        height: 360px;
+        margin-left: 35rem;
+      }
+    }
+  }
+}

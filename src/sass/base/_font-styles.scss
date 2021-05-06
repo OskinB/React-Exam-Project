@@ -1,0 +1,138 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  font-family: "Inter";
+}
+
+/* Font styles */
+.font-52-bold {
+  @include text-style(3.25rem, $text-color, left, 700);
+}
+
+.font-36-bold {
+  @include text-style(2.25rem, $text-color, left, 700);
+}
+.font-32-bold {
+  @include text-style(2rem, $text-color, left, 700);
+
+  @include mobile {
+    @include text-style(1.5rem, $text-color, left, 700);
+  }
+}
+
+.font-32-regular-grey {
+  @include text-style(2rem, $grey-text, left, 400);
+
+  @include mobile {
+    @include text-style(1.5rem, $grey-text, left, 400);
+  }
+}
+
+.font-24-bold {
+  @include text-style(1.5rem, $text-color, left, 700);
+}
+
+.font-24-bold-center {
+  @include text-style(1.5rem, $text-color, center, 700);
+}
+
+.font-20-bold {
+  @include text-style(1.25rem, $text-color, left, 700);
+}
+.font-20-bold-white {
+  @include text-style(1.25rem, $white, left, 700);
+}
+.font-20-bold-white-center {
+  @include text-style(1.25rem, $white, center, 700);
+}
+
+.font-20-regular-grey {
+  @include text-style(1.25rem, $grey-text, left, 400);
+}
+.font-18-regular-grey {
+  @include text-style(1.125rem, $grey-text, left, 500);
+}
+.font-16-bold {
+  @include text-style(1rem, $text-color, left, 700);
+}
+.font-16-bold-center-primary {
+  @include text-style(1rem, $primary-color, center, 700);
+}
+.font-16-bold-center-white {
+  @include text-style(1rem, $white, center, 700);
+}
+.font-16-medium-center-white {
+  @include text-style(1rem, $white, center, 500);
+}
+.font-16-bold-center {
+  @include text-style(1rem, $text-color, center, 700);
+}
+.font-16-medium {
+  @include text-style(1rem, $text-color, left, 500);
+}
+.font-16-medium-darkgrey {
+  @include text-style(1rem, $dark-grey-text, left, 500);
+}
+.font-16-regular {
+  @include text-style(1rem, $text-color, left, 400);
+}
+.font-16-regular-darkgrey {
+  @include text-style(1rem, $dark-grey-text, left, 400);
+}
+.font-16-regular-grey {
+  @include text-style(1rem, $grey-text, left, 400);
+
+  @include mobile {
+    @include text-style(0.875rem, $grey-text, left, 400);
+  }
+}
+.font-14-regular-darkgrey {
+  @include text-style(0.875rem, $dark-grey-text, left, 400);
+}
+.font-14-medium-darkgrey {
+  @include text-style(0.875rem, $dark-grey-text, left, 500);
+}
+.font-14-medium-darkgrey-center {
+  @include text-style(0.875rem, $dark-grey-text, center, 500);
+}
+.font-14-medium-white {
+  @include text-style(0.875rem, $white, left, 500);
+}
+.font-12-regular {
+  @include text-style(0.75rem, $text-color, center, 400);
+}
+
+
+.font-12-regular-left {
+  @include text-style(0.75rem, $text-color, left, 400);
+}
+
+.btn-text-bold-white {
+  @include text-style(0.875rem, $white, center, 700);
+}
+
+.btn-text-bold-green {
+  @include text-style(0.875rem, $insurance, center, 700);
+}
+
+.btn-text-bold-primarycolor {
+  @include text-style(0.875rem, $primary-color, center, 700);
+}
+
+.btn-text-bold-grey {
+  @include text-style(0.875rem, $dark-grey-text, left, 700);
+}
+
+.required-text-alert {
+  @include text-style(0.75rem, $alert-color, center, 400);
+}

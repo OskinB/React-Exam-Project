@@ -1,0 +1,34 @@
+@import "../../App.scss";
+
+.btn-quickadd {
+  margin: 8px;
+  padding: 8px;
+  z-index: 999;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  @include mobile {
+    bottom: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 50px;
+  }
+  .addNewBtn {
+    height: 40px;
+    width: 40px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    &:hover,
+    &:focus,
+    &:active {
+      // Grow
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.search-bar {
+  margin: 4rem 7rem;
+  @include mobile {
+    margin: 0rem;
+    margin-top: 4rem;
+  }
+
+  .bar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include mobile {
+      margin: 1rem;
+    }
+
+    .search-input {
+      position: relative;
+      width: 452px;
+      height: 3rem;
+      background-color: $bg-light;
+      display: flex;
+      align-items: center;
+      @include mobile {
+        width: 100%;
+      }
+
+      input {
+        width: 452px;
+        height: 3rem;
+        border: none;
+        background-color: $light-grey-text;
+        color: $text-color;
+        border-radius: 4px;
+        text-indent: 4rem;
+        font-size: 1rem;
+      }
+
+      .bx-search {
+        position: absolute;
+        left: 1rem;
+        color: $primary-color;
+        font-size: 2rem;
+      }
+
+      .bx-x {
+        position: absolute;
+        right: 0.5rem;
+        color: $primary-color;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .view-icons {
+      font-size: 30px;
+      @include mobile {
+        display: none;
+      }
+
+      .bx {
+        color: $grey-text;
+        margin-left: 1rem;
+      }
+
+      .active {
+        color: $primary-color;
+      }
+
+      button {
+        background-color: $white;
+      }
+    }
+  }
+
+  .loading-text {
+    margin: 120px 0;
+    padding: 8px 0;
+  }
+}

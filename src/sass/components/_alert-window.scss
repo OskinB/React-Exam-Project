@@ -1,0 +1,60 @@
+// alert modal
+.close-alert-slide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background: rgba(51, 51, 51, 0.6);
+  z-index: 999999;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+  .close-alert-window {
+    border-radius: 4px;
+    width: 439px;
+    background-color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.alert-window-content {
+  width: 100%;
+  padding: 2rem 1rem;
+  .title {
+    padding-bottom: 1.5rem;
+  }
+  .text {
+    line-height: 24px;
+  }
+  .buttons {
+    margin-top: 1rem;
+    text-align: center;
+    .cancel,
+    .confirm {
+      margin-top: 1rem;
+      height: 48px;
+      width: 128px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .confirm {
+      background-color: $primary-color;
+      color: #fff;
+      &:hover {
+        background-color: $primary-hover-color;
+        color: #fff;
+      }
+    }
+
+    .cancel {
+      border: solid 1px $dark-grey-text;
+      color: $dark-grey-text;
+      margin-right: 2rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../App.scss";
+
+.total-value {
+    @include flex(row, flex-start, center);
+    margin: 16px 0;
+
+    p {
+        margin-right: 24px;
+    }
+}

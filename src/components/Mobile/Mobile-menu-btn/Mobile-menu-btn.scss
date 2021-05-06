@@ -1,0 +1,16 @@
+@import "../../../App.scss";
+
+.mobile-menu-btn {
+  @include desktop {
+    display: none;
+  }
+  @include mobile {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .bx-menu-alt-right {
+    font-size: 2rem;
+    color: $primary-color;
+  }
+}

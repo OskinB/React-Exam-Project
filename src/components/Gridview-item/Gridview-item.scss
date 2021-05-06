@@ -1,0 +1,40 @@
+@import "../../App.scss";
+
+.category-item {
+  margin: 24px;
+  box-sizing: border-box;
+
+  .item {
+    a {
+      text-decoration: none;
+    }
+
+    .item-img {
+      height: 112px;
+      width: 151px;
+      position: relative;
+      border-radius: 4px;
+    }
+
+    .item-insurance {
+      position: absolute;
+      transform: translate(-70%, -30%);
+      display: inline-flex;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .item-text {
+      text-align: center;
+      margin: 8px;
+    }
+
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+
+}

@@ -1,0 +1,29 @@
+.dropdown-btn {
+  height: 3rem;
+  width: 268px;
+  background-color: $bg-light;
+  color: $text-color;
+  border-radius: 4px;
+  text-indent: 1rem;
+  font-size: 1rem;
+  border: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+// edit drop down
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .bxs-chevron-down {
+    size: 1rem;
+  }
+  .dropdown-btn-edit {
+    border: none;
+    background-color: $white;
+  }
+}

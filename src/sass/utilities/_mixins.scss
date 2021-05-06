@@ -1,0 +1,70 @@
+// ** Layout **
+@mixin flex($dir: null, $jst: null, $algn: null) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jst;
+  align-items: $algn;
+}
+
+// ** Input **
+@mixin input($width) {
+  height: 3rem;
+  width: $width;
+  background-color: $bg-light;
+  color: $text-color;
+  border-radius: 4px;
+  text-indent: 1rem;
+  font-size: 1rem;
+  border: none;
+}
+
+// ** Font styles **
+@mixin text-style($font-size, $font-color, $text-align, $font-weight) {
+  font-size: $font-size;
+  color: $font-color;
+  text-align: $text-align;
+  font-weight: $font-weight;
+  @content;
+}
+
+// ** Buttons **
+@mixin btn-holder($primary-color, $width) {
+  position: relative;
+  background-color: $primary-color;
+  width: $width;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+@mixin btn($btn-width) {
+  height: $btn-height;
+  width: $btn-width;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  @include flex(row, center, center);
+  @content;
+}
+
+// ** header footer logo **
+@mixin bb-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $primary-color;
+  padding: 2.875rem 0.5rem 0 0;
+}
+
+// ** Media queries **
+@mixin desktop {
+  @media only screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
