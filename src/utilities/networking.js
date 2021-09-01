@@ -1,4 +1,4 @@
-// **** All API URL's have been change to placeholders. ****
+// **** All API URL's have been changed to placeholders. ****
 
 export const POST = (url, data) => {
   let headers = {
