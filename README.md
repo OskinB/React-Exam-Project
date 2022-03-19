@@ -5,8 +5,9 @@ This application gives you an overview of your belongings f.x. within a company.
 > Desktop and mobile view.<br>
 
 Unfortunately, I don't have control over the database and server, so the project is not live. <br>
-You can view a demo video by downloading it:
-https://github.com/OskinB/React-Exam-Project/blob/main/src/assets/Demo.mov
+You can view a demo video here:
+
+https://user-images.githubusercontent.com/43991373/159134171-5c2b7a2d-5bcf-4587-831a-04f6ec50ac8d.mp4
 
 ## Project setup
 To start the project locally: 
